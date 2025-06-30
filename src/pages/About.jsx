@@ -13,7 +13,7 @@ const About = () => {
       title: "Achievements",
       items: [
         "Bachelor's of Science in Recording Industry, Music Business concentration",
-        "Earned Professional Certificate in Full Stack w/ MERN from MIT xPRO",
+        "Professional Certificate in Full Stack w/ MERN from MIT xPRO",
         "Building a growing portfolio of full-stack applications"
       ]
     },
