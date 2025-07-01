@@ -36,17 +36,17 @@ const About = () => {
      className="p-6 bg-soft-green dark:bg-warm-gray rounded-lg shadow-md w-full font-sans max-h-[calc(100vh-260px)] overflow-y-auto">
       <h2 className="text-3xl font-light text-soft-blue dark:text-peach mb-4">ABOUT ME</h2>
       <p className="text-gray-700 dark:text-gray-300 font-normal">
-        Aspiring full-stack web developer with a music-industry background and a passion for building intuitive, creative digital experiences. 
+        I'm an aspiring full-stack web developer with a background in the music industry, and a passion for bringing useful and engaging web apps to life. 
       </p>
 
       {/* Skills Section */}
-      <h3 className="text-xl font-semibold text-soft-blue dark:text-peach mb-4 tracking-wide">What I Do:</h3>
+      <h3 className="text-xl font-semibold text-soft-blue dark:text-peach mt-6 mb-4 tracking-wide">What I Do:</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-all duration-300 cursor-pointer"
              onClick={() => expandSection('webDev')}>
-          <h4 className="font-medium text-lg text-light-orange dark:text-soft-blue tracking-tight">Web Development & Software</h4>
+          <h4 className="font-medium text-lg text-light-orange dark:text-soft-blue tracking-tight">Web Dev & Software</h4>
           <p className="text-gray-600 dark:text-gray-400 font-light">
-            I create scalable web applications with React, Next.js, Tailwind, and Node.js. Always experimenting with new technologies, custom themes, and captivating user experiences.
+            I enjoy building with React, Next.js, Tailwind, and Node.js. I'm all about crafting a unique user experience, and I love playing around with new technologies and style packages.
           </p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-all duration-300 cursor-pointer"
@@ -198,7 +198,7 @@ const About = () => {
               {expandedSection === 'webDev' && (
                 <>
                   <h3 className="text-2xl font-bold text-light-orange dark:text-soft-blue mb-4">Web Development & Software</h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-8">
                     I create scalable web applications with React, Next.js, Tailwind, and Node.js. Always experimenting with new technologies, custom themes, and captivating user experiences.
                   </p>
                   

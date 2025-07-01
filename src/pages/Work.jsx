@@ -4,49 +4,49 @@ import { motion, AnimatePresence } from 'framer-motion';
 const projects = [
   {
     id: 1,
-    title: 'Flourish',
-    shortDescription: 'A gluten-free recipe converter that swaps ingredients intelligently.',
-    thumbnail: '/assets/flourish-thumb.png',
-    demo: 'https://flourish-demo.vercel.app',
-    repo: 'https://github.com/your/flourish',
+    title: 'Earnest',
+    shortDescription: 'A time tracking and budgeting tool designed to help users manage their time and money effectively.',
+    thumbnail: '/images/earnest-thumb.png',
+    demo: 'https://earnest-xi.vercel.app/',
+    repo: 'https://github.com/mxleach/earnest',
   },
   {
     id: 2,
-    title: 'MLC Toolkit v3',
-    shortDescription: 'A suite of tools used internally for music rights metadata verification.',
-    thumbnail: '/assets/mlc-toolkit-thumb.png',
+    title: 'Cappsule',
+    shortDescription: 'A digital scrapbook designed for couples to capture and share their memories together.',
+    thumbnail: '/images/cappsule-thumb.png',
     demo: 'https://mlc-tools.vercel.app',
     repo: 'https://github.com/your/mlc-toolkit',
   },
   {
     id: 3,
-    title: 'Music Rights Platform',
-    shortDescription: 'A suite of tools used internally for music rights metadata verification.',
-    thumbnail: '/assets/mlc-toolkit-thumb.png',
+    title: 'Yoga Posies',
+    shortDescription: 'A website designed for my mom\'s yoga business, featuring class schedules. ',
+    thumbnail: '/images/yogaposies-thumb.png',
     demo: 'https://mlc-tools.vercel.app',
     repo: 'https://github.com/your/mlc-toolkit',
   },
   {
     id: 4,
-    title: 'Artist Dashboard',
+    title: 'VitalSync',
     shortDescription: 'A suite of tools used internally for music rights metadata verification.',
-    thumbnail: '/assets/mlc-toolkit-thumb.png',
+    thumbnail: '/images/vitalsync-thumb.png',
     demo: 'https://mlc-tools.vercel.app',
     repo: 'https://github.com/your/mlc-toolkit',
   },
   {
     id: 5,
-    title: 'Royalty Calculator',
-    shortDescription: 'A suite of tools used internally for music rights metadata verification.',
-    thumbnail: '/assets/mlc-toolkit-thumb.png',
+    title: 'MLC Mastertool',
+    shortDescription: 'A suite of tools used internally for music rights metadata verification and formatting.',
+    thumbnail: '/images/mlc-toolkit-thumb.png',
     demo: 'https://mlc-tools.vercel.app',
     repo: 'https://github.com/your/mlc-toolkit',
   },
   {
     id: 6,
-    title: 'Rights Management System',
-    shortDescription: 'A suite of tools used internally for music rights metadata verification.',
-    thumbnail: '/assets/mlc-toolkit-thumb.png',
+    title: 'Flourish',
+    shortDescription: 'A tool that helps users convert regular recipes to gluten-friendly versions.',
+    thumbnail: '/images/flourish-thumb.png',
     demo: 'https://mlc-tools.vercel.app',
     repo: 'https://github.com/your/mlc-toolkit',
   },
@@ -158,8 +158,24 @@ const Work = () => {
                     <h3 className="text-xl font-bold text-soft-blue dark:text-peach">{project.title}</h3>
                     <p className="text-gray-600 dark:text-gray-300 mt-2">{project.shortDescription}</p>
                     <div className="mt-4 flex gap-4">
-                      <a href={project.demo} className="px-4 py-2 bg-soft-blue text-white rounded hover:bg-blue-600 transition-colors" onClick={(e) => e.stopPropagation()}>Live Demo</a>
-                      <a href={project.repo} className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors" onClick={(e) => e.stopPropagation()}>Repository</a>
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-soft-blue text-white rounded hover:bg-blue-600 transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Live Demo
+                      </a>
+                      <a
+                        href={project.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Repository
+                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -195,8 +211,22 @@ const Work = () => {
               <img src={selectedProject.thumbnail} alt={selectedProject.title} className="w-full h-64 object-cover rounded mb-4" />
               <p className="text-gray-700 dark:text-gray-300">{selectedProject.shortDescription}</p>
               <div className="mt-6 flex gap-4">
-                <a href={selectedProject.demo} className="px-4 py-2 bg-soft-blue text-white rounded hover:bg-blue-600 transition-colors">Live Demo</a>
-                <a href={selectedProject.repo} className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">Repository</a>
+                <a
+                  href={selectedProject.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-soft-blue text-white rounded hover:bg-blue-600 transition-colors"
+                >
+                  Live Demo
+                </a>
+                <a
+                  href={selectedProject.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                >
+                  Repository
+                </a>
                 <button onClick={() => setSelectedProject(null)} className="ml-auto px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Close</button>
               </div>
             </motion.div>

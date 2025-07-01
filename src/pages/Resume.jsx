@@ -5,24 +5,24 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     id: 1,
-    title: "Music Rights Data Specialist",
-    company: "Music Licensing Company",
-    period: "2022 - Present",
+    title: "Royalty Data Matching Specialist",
+    company: "The MLC (Mechanical Licensing Collective)",
+    period: "2024 - Present",
     description: "Manage royalty data entry and maintain database integrity for music rights management. Collaborate with cross-functional teams to ensure accurate payment processing."
   },
   {
     id: 2,
-    title: "Frontend Developer (Freelance)",
+    title: "Freelance Software Development & Support",
     company: "Self-employed",
     period: "2021 - Present",
-    description: "Develop custom web applications for small businesses. Implement responsive designs using React, Next.js, and Tailwind CSS."
+    description: "Develop custom web applications for private clients (small business owners), particularly those in the dental space. While I prefer building custom sites, most of my work has been in WordPress. I have also built a few custom sites using Next.js and Tailwind CSS."
   },
   {
     id: 3,
-    title: "Radio Show Host & Editor",
-    company: "MTSU University Media",
+    title: "Editor - Lifestyles Section",
+    company: "MTSU Sidelines",
     period: "2018 - 2021",
-    description: "Hosted weekly radio show and served as editor for university newspaper and website. Created engaging content while maintaining editorial standards."
+    description: "Served as editor for university newspaper and website. Created engaging content while meeting AP Style guidelines."
   }
 ];
 
@@ -58,8 +58,9 @@ const Resume = () => {
   const downloadResume = () => {
     // Replace with path to your actual resume file
     const link = document.createElement('a');
-    link.href = '/assets/your-resume.pdf';
-    link.download = 'YourName-Resume.pdf';
+    link.href = '/resume.pdf';
+link.download = 'Max_Leach_Resume.pdf';
+
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -168,15 +169,13 @@ const Resume = () => {
           <h3 className="text-xl font-semibold text-soft-blue dark:text-peach mb-4">Resume Preview</h3>
           <div className="aspect-[8.5/11] w-full border border-gray-300 dark:border-gray-600 rounded overflow-hidden">
             {/* Replace with actual path to your resume image/PDF */}
-            <img 
-              src="/assets/resume-preview.jpg" 
-              alt="Resume Preview" 
-              className="w-full h-full object-contain"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = `/api/placeholder/600/800`;
-              }}
-            />
+            <div className="aspect-[8.5/11] w-full border border-gray-300 dark:border-gray-600 rounded overflow-hidden">
+  <iframe
+    src="/resume.pdf"
+    title="Resume PDF Preview"
+    className="w-full h-[900px] rounded"
+  />
+</div>
           </div>
         </div>
       )}
